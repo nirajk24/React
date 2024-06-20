@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "title": "My First Blog",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. In nulla est enim explicabo, laudantium atque facere vitae dicta tempore, sed magni autem sunt nam iure quam. Ab, reiciendis corporis officiis nihil magni facere tempora exercitationem, maxime commodi similique aliquid modi deserunt, sint magnam suscipit optio dolores. Voluptates minus, hic facere tenetur in esse cum ipsa et ipsam recusandae, dolorum praesentium amet temporibus delectus autem! Iste, sequi ut.\nSoluta asperiores facere commodi nostrum aliquam vitae error reiciendis ducimus illum reprehenderit quis, architecto sequi assumenda magnam similique aliquid numquam minima ipsum! Repellat iste voluptas rerum ipsum, laborum corrupti hic necessitatibus assumenda soluta?",
+      "author": "mario",
+      "id": 1
+    },
+    {
+      "title": "Opening Party!",
+      "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. In nulla est enim explicabo, laudantium atque facere vitae dicta tempore, sed magni autem sunt nam iure quam.\nAb, reiciendis corporis officiis nihil magni facere tempora exercitationem, maxime commodi similique aliquid modi deserunt, sint magnam suscipit optio dolores. Voluptates minus, hic facere tenetur in esse cum ipsa et ipsam recusandae, dolorum praesentium amet temporibus delectus autem! Iste, sequi ut.\nSoluta asperiores facere commodi nostrum aliquam vitae error reiciendis ducimus illum reprehenderit quis, architecto sequi assumenda magnam similique aliquid numquam minima ipsum! Repellat iste voluptas rerum ipsum, laborum corrupti hic necessitatibus assumenda soluta?",
+      "author": "yoshi",
+      "id": 2
+    }
+  ]
+}
