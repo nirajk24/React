@@ -1,3 +1,5 @@
+import { forwardRef } from "react"
+
 const Select = ({ options, label, className = "", ...props }, ref) => {
   const id = useId()
 
@@ -25,4 +27,4 @@ const Select = ({ options, label, className = "", ...props }, ref) => {
   )
 }
 
-export default React.forwardRef(Select)
+export default forwardRef(Select)
