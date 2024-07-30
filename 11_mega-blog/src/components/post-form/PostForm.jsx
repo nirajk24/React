@@ -18,7 +18,7 @@ const PostForm = ({ post }) => {
     })
 
   const navigate = useNavigate()
-  const userData = useSelector((state) => state.user.userData)
+  const userData = useSelector((state) => state.auth.userData)
 
   const submit = async (data) => {
     if (post) {
@@ -43,13 +43,13 @@ const PostForm = ({ post }) => {
 
       if (file) {
         const fileId = file.$id
-        data.featuredImage = fileId
+        data.featuredimage = fileId
         const dbPost = await appWriteService.createPost({
           ...data,
-          userId: userData.$id,
+          userid: userData.$id,
         })
 
-        if (dbPost) {
+        if (dbPost) { 
           navigate(`/post/${dbPost.$id}`)
         }
       }
@@ -61,12 +61,13 @@ const PostForm = ({ post }) => {
       return value
         .trim()
         .toLowerCase()
-        .replace(/^[a-zA-Z\d\s]+/g, "-")
-        .replace(/\s/g, "-")
+        .replace(/[^a-zA-Z\d]+/g, "-")
+        .replace(/^-+|-+$/g, "");
     }
-
-    return ""
-  }, [])
+  
+    return "";
+  }, []);
+  
 
   useEffect(() => {
     const subscription = watch((value, { name }) => {

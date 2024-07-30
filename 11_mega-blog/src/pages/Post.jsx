@@ -6,7 +6,7 @@ import parse from "html-react-parser"
 import { useSelector } from "react-redux"
 
 const Post = () => {
-  const [post, setPosts] = useState(null)
+  const [post, setPost] = useState(null)
   const { slug } = useParams()
   const navigate = useNavigate()
 
@@ -17,7 +17,7 @@ const Post = () => {
   useEffect(() => {
     if (slug) {
       appwriteService.getPost(slug).then((post) => {
-        if (post) setPosts(post)
+        if (post) setPost(post)
         else navigate("/")
       })
     } else navigate("/")
@@ -26,7 +26,7 @@ const Post = () => {
   const deletePost = () => {
     appwriteService.deletePost(post.$id).then((status) => {
       if (status) {
-        appwriteService.deleteFile(post.featuredImage)
+        appwriteService.deleteFile(post.featuredimage)
         navigate("/")
       }
     })
@@ -37,7 +37,7 @@ const Post = () => {
       <Container>
         <div className='w-full flex justify-center mb-4 relative border rounded-xl p-2'>
           <img
-            src={appwriteService.getFilePreview(post.featuredImage)}
+            src={appwriteService.getFilePreview(post.featuredimage)}
             alt={post.title}
             className='rounded-xl'
           />
